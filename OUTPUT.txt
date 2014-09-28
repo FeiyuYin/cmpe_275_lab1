@@ -1,0 +1,99 @@
+Sep 28, 2014 2:54:28 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@23597cac: startup date [Sun Sep 28 14:54:28 PDT 2014]; root of context hierarchy
+Sep 28, 2014 2:54:28 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from file [/home/yin/workspace/CMPE275Lab1/src/main/resource/beans.xml]
+Sep 28, 2014 2:54:28 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3918b6e2: defining beans [org.springframework.aop.config.internalAutoProxyCreator,profileService,profile,org.feiyu.cmpe275.Lab1.ProfileServiceLoggingAspect#0]; root of factory hierarchy
+testA
+Bob reads the profile of Alice
+Does not have the priviledge to read!
+Sep 28, 2014 2:54:29 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@3cc569fd: startup date [Sun Sep 28 14:54:29 PDT 2014]; root of context hierarchy
+Sep 28, 2014 2:54:29 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from file [/home/yin/workspace/CMPE275Lab1/src/main/resource/beans.xml]
+Sep 28, 2014 2:54:29 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@31492cfe: defining beans [org.springframework.aop.config.internalAutoProxyCreator,profileService,profile,org.feiyu.cmpe275.Lab1.ProfileServiceLoggingAspect#0]; root of factory hierarchy
+testB
+Alice shares the profile of Alice to Bob
+OK to share the profile.
+Bob reads the profile of Alice
+OK to read the profile.
+Sep 28, 2014 2:54:29 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@877d036: startup date [Sun Sep 28 14:54:29 PDT 2014]; root of context hierarchy
+Sep 28, 2014 2:54:29 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from file [/home/yin/workspace/CMPE275Lab1/src/main/resource/beans.xml]
+Sep 28, 2014 2:54:29 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7f10690a: defining beans [org.springframework.aop.config.internalAutoProxyCreator,profileService,profile,org.feiyu.cmpe275.Lab1.ProfileServiceLoggingAspect#0]; root of factory hierarchy
+testC
+Alice shares the profile of Alice to Bob
+OK to share the profile.
+Bob shares the profile of Alice to Carl
+OK to share the profile.
+Carl reads the profile of Alice
+OK to read the profile.
+Sep 28, 2014 2:54:29 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@5a9420ca: startup date [Sun Sep 28 14:54:29 PDT 2014]; root of context hierarchy
+Sep 28, 2014 2:54:29 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from file [/home/yin/workspace/CMPE275Lab1/src/main/resource/beans.xml]
+Sep 28, 2014 2:54:29 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@51670b57: defining beans [org.springframework.aop.config.internalAutoProxyCreator,profileService,profile,org.feiyu.cmpe275.Lab1.ProfileServiceLoggingAspect#0]; root of factory hierarchy
+testD
+Alice shares the profile of Alice to Bob
+OK to share the profile.
+Bob shares the profile of Carl to Alice
+Does not have the priviledge to share!
+Sep 28, 2014 2:54:29 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2b2fe2f0: startup date [Sun Sep 28 14:54:29 PDT 2014]; root of context hierarchy
+Sep 28, 2014 2:54:29 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from file [/home/yin/workspace/CMPE275Lab1/src/main/resource/beans.xml]
+Sep 28, 2014 2:54:29 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@36dce5c: defining beans [org.springframework.aop.config.internalAutoProxyCreator,profileService,profile,org.feiyu.cmpe275.Lab1.ProfileServiceLoggingAspect#0]; root of factory hierarchy
+testE
+Alice shares the profile of Alice to Bob
+OK to share the profile.
+Bob shares the profile of Alice to Carl
+OK to share the profile.
+Alice unshares the profile to Carl
+OK to unshare.
+Carl reads the profile of Alice
+Does not have the priviledge to read!
+Sep 28, 2014 2:54:29 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2ad4bf7b: startup date [Sun Sep 28 14:54:29 PDT 2014]; root of context hierarchy
+Sep 28, 2014 2:54:29 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from file [/home/yin/workspace/CMPE275Lab1/src/main/resource/beans.xml]
+Sep 28, 2014 2:54:29 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@56d637ab: defining beans [org.springframework.aop.config.internalAutoProxyCreator,profileService,profile,org.feiyu.cmpe275.Lab1.ProfileServiceLoggingAspect#0]; root of factory hierarchy
+testF
+Alice shares the profile of Alice to Bob
+OK to share the profile.
+Alice shares the profile of Alice to Carl
+OK to share the profile.
+Carl shares the profile of Alice to Bob
+OK to share the profile.
+Alice unshares the profile to Bob
+OK to unshare.
+Bob reads the profile of Alice
+Does not have the priviledge to read!
+Sep 28, 2014 2:54:29 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@6523ff4a: startup date [Sun Sep 28 14:54:29 PDT 2014]; root of context hierarchy
+Sep 28, 2014 2:54:29 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from file [/home/yin/workspace/CMPE275Lab1/src/main/resource/beans.xml]
+Sep 28, 2014 2:54:29 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@36ab8f0b: defining beans [org.springframework.aop.config.internalAutoProxyCreator,profileService,profile,org.feiyu.cmpe275.Lab1.ProfileServiceLoggingAspect#0]; root of factory hierarchy
+testG
+Alice shares the profile of Alice to Bob
+OK to share the profile.
+Bob shares the profile of Alice to Carl
+OK to share the profile.
+Alice unshares the profile to Bob
+OK to unshare.
+Bob shares the profile of Alice to Carl
+Does not have the priviledge to share!
+
+testA: pass 
+testB: pass 
+testC: pass 
+testD: pass 
+testE: pass 
+testF: pass 
+testG: pass 
