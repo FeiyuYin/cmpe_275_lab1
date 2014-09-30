@@ -1,5 +1,10 @@
 package org.feiyu.cmpe275.Lab1;
 
+/*
+This class creates getter and setter of parameters used in Profile Service Interface
+Getter and Setter of parameter UserId, Name and Age
+*/
+
 public class Profile {
 
 	private String userId; 
