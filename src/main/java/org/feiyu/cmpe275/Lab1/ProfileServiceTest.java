@@ -10,6 +10,11 @@ import org.junit.Before;
 import org.junit.Test; 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+/**
+ * This class set up profiles
+ * Creates JUnit test cases
+ */
  
 public class ProfileServiceTest { 
    
@@ -20,6 +25,11 @@ public class ProfileServiceTest {
     	
 		ApplicationContext context = new FileSystemXmlApplicationContext("src/main/resource/beans.xml");
 		profileService = (ProfileServiceImpl) context.getBean("profileService");
+		
+		/**
+		 * 3 profiles of Alice , Bob , and carl
+		 * Set their Name, Age and UserId
+		 */
 		
 		Profile alice = (Profile) context.getBean("profile"); 
 		Profile bob = (Profile) context.getBean("profile");
@@ -58,12 +68,24 @@ public class ProfileServiceTest {
 		profileService.setProfiles(profiles);
     } 
  
+ 
+ 
+ /**
+  * testA checks that Bob cannot read the profile of Alice as is it is not shared
+  */
+  
     @Test(expected = UnauthorizedException.class) 
     public void testA() { 
  
     	System.out.println("testA"); 
     	profileService.readProfile("Bob", "Alice"); 
     } 
+    
+    /**
+     * testB checks 
+     * Alice shares her profile with Bob
+     * Bob can read Alice’s profile.
+     */
  
     @Test 
     public void testB(){ 
@@ -71,7 +93,14 @@ public class ProfileServiceTest {
     	System.out.println("testB"); 
     	profileService.shareProfile("Alice", "Alice", "Bob"); 
     	profileService.readProfile("Bob","Alice"); 
-    } 
+    }
+    
+    /**
+     * testC checks
+     * Alice shares her profile with Bob 
+     * Bob shares Alice’s profile with Carl, and
+     * Carl can read Alice’s profile.
+     */
     
     @Test 
     public void testC(){
@@ -81,6 +110,12 @@ public class ProfileServiceTest {
     	profileService.readProfile("Carl", "Alice");
     }
     
+    /**
+     * testD checks
+     * Alice shares her profile with Bob;
+     * Bob shares Carl’s profile with Alice and gets an exception.
+     */
+    
     @Test(expected = UnauthorizedException.class)
     public void testD(){
     	
@@ -88,6 +123,14 @@ public class ProfileServiceTest {
     	profileService.shareProfile("Alice", "Alice", "Bob"); 
     	profileService.shareProfile("Bob", "Carl", "Alice");
     }
+    
+    /**
+     * testE checks
+     * Alice shares her profile with Bob
+     * Bob shares Alice’s profile with Carl
+     * Alice unshares her profile with Carl
+     * Carl cannot read Alice’s profile
+     */
     
     @Test(expected = UnauthorizedException.class) 
     public void testE(){
@@ -98,6 +141,15 @@ public class ProfileServiceTest {
     	profileService.readProfile("Carl", "Alice");
     }
     
+    /**
+     * testF checks
+     * Alice shares her profile with Bob,
+     * Alice shared her profile with Carl,
+     * Carl shares Alice’s profile with Bob,
+     * Alice unshares her profile with Bob,
+     * Bob cannot read Alice’s profile
+     */
+     
     @Test(expected = UnauthorizedException.class) 
     public void testF(){
     	System.out.println("testF");
@@ -107,6 +159,15 @@ public class ProfileServiceTest {
     	profileService.unshareProfile("Alice", "Bob");
     	profileService.readProfile("Bob", "Alice");
     }
+    
+    /**
+     * testG checks
+     * Alice shares her profile with Bob,
+     * Bob shares Alice’s profile with Carl
+     * Alice unshares her profile with Bob.
+     * Bob shares Alice’s profile with Carl with again, and get an exception. 
+     * Carl still has access to Alice’s profile.
+     */
     
     @Test(expected = UnauthorizedException.class) 
     public void testG(){
