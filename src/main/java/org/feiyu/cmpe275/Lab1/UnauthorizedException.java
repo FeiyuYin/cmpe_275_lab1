@@ -1,5 +1,10 @@
 package org.feiyu.cmpe275.Lab1;
 
+/**
+ * This class is used for exception in junit test cases.
+ */
+
+
 public class UnauthorizedException extends RuntimeException{
 
 	  private static final long serialVersionUID = 1L; 
