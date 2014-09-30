@@ -3,6 +3,11 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 
+/**
+ * ProfileServiceImpl class forgets to implement access control
+ * ProfileServiceLoggingAspect uses AOP to implement access control
+ */
+
 
 @Aspect
 public class ProfileServiceLoggingAspect {
